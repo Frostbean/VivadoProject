@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/clk_1khz.v" \
+"../../../../project_1.srcs/sources_1/new/clk_quarter_hz.v" \
+"../../../../project_1.srcs/sources_1/new/led_decoder.v" \
+"../../../../project_1.srcs/sources_1/new/random_generator.v" \
+"../../../../project_1.srcs/sources_1/new/scan.v" \
+"../../../../project_1.srcs/sources_1/new/scan_7_seg.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
