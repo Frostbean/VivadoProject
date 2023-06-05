@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/user/Downloads/project_1/project_1.runs/synth_1/scan_7_seg.tcl"
+  variable script "C:/Users/user/Downloads/VivadoProject/project_1/project_1.runs/synth_1/scan_7_seg.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,27 +70,29 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/user/Downloads/project_1/project_1.cache/wt [current_project]
-set_property parent.project_path C:/Users/user/Downloads/project_1/project_1.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/user/Downloads/VivadoProject/project_1/project_1.cache/wt [current_project]
+set_property parent.project_path C:/Users/user/Downloads/VivadoProject/project_1/project_1.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/user/Downloads/project_1/project_1.cache/ip [current_project]
+set_property ip_output_repo c:/Users/user/Downloads/VivadoProject/project_1/project_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  C:/Users/user/Downloads/project_1/project_1.srcs/sources_1/new/clk_1khz.v
-  C:/Users/user/Downloads/project_1/project_1.srcs/sources_1/new/clk_quarter_hz.v
-  C:/Users/user/Downloads/project_1/project_1.srcs/sources_1/new/led_decoder.v
-  C:/Users/user/Downloads/project_1/project_1.srcs/sources_1/new/random_generator.v
-  C:/Users/user/Downloads/project_1/project_1.srcs/sources_1/new/scan.v
-  C:/Users/user/Downloads/project_1/project_1.srcs/sources_1/new/scan_7_seg.v
+  C:/Users/user/Downloads/VivadoProject/project_1/project_1.srcs/sources_1/new/clk_16hz.v
+  C:/Users/user/Downloads/VivadoProject/project_1/project_1.srcs/sources_1/new/clk_1khz.v
+  C:/Users/user/Downloads/VivadoProject/project_1/project_1.srcs/sources_1/new/led_decoder.v
+  C:/Users/user/Downloads/VivadoProject/project_1/project_1.srcs/sources_1/new/random_generator.v
+  C:/Users/user/Downloads/VivadoProject/project_1/project_1.srcs/sources_1/new/scan.v
+  C:/Users/user/Downloads/VivadoProject/project_1/project_1.srcs/sources_1/new/scan_7_seg.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -101,8 +103,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/user/Downloads/project_1/project_1.srcs/constrs_1/new/slot_machine.xdc
-set_property used_in_implementation false [get_files C:/Users/user/Downloads/project_1/project_1.srcs/constrs_1/new/slot_machine.xdc]
+read_xdc C:/Users/user/Downloads/VivadoProject/project_1/project_1.srcs/constrs_1/new/slot_machine.xdc
+set_property used_in_implementation false [get_files C:/Users/user/Downloads/VivadoProject/project_1/project_1.srcs/constrs_1/new/slot_machine.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

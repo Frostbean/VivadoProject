@@ -26,18 +26,21 @@ module scan_7_seg (
     input clk, rst, enable;
     output seg_code;
     output [3:0] scan;
+    wire [3:0] enable;
     wire [15:0] result;
     wire [7:0] seg_code;
     wire [3:0] scan;
-    wire clk_1khz, clk_quarter_hz;
+    wire clk_1khz, clk_4hz, clk_1hz;
     reg [3:0] temp;
     reg [3:0] in;
+    reg win;
 
-    random_generator m1(.enable(enable), .clk(clk), .clk_quarter_hz(clk_quarter_hz), .ran(result), .rst(rst));
+    random_generator m1(.enable(enable), .clk(clk), .clk_16hz(clk_16hz), .ran(result), .rst(rst));
     scan m2(.scan(scan), .clk(clk_1khz), .rst(rst));
     led_decoder m3(.seg_code(seg_code), .in(in), .clk(clk), .rst(rst));
     clk_1khz m4(.clk_1khz(clk_1khz), .clk(clk), .rst(rst));
-    clk_quarter_hz m5(.clk_quarter_hz(clk_quarter_hz), .clk(clk), .rst(rst));
+    clk_16hz m5(.clk_16hz(clk_16hz), .clk(clk), .rst(rst));
+//    clk_1hz m6(.clk_1hz(clk_1hz), .clk(clk), .rst(rst));
 
     initial
     begin

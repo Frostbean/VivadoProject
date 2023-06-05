@@ -11,10 +11,13 @@ set_property IOSTANDARD LVCMOS33 [get_ports {seg_code[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {seg_code[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {seg_code[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports clk]
-set_property IOSTANDARD LVCMOS33 [get_ports enable]
+set_property IOSTANDARD LVCMOS33 [get_ports {enable[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {enable[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {enable[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {enable[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports rst]
 set_property PACKAGE_PIN P17 [get_ports clk]
-set_property PACKAGE_PIN R11 [get_ports enable]
+set_property PACKAGE_PIN R1 [get_ports enable]
 set_property PACKAGE_PIN V1 [get_ports rst]
 set_property PACKAGE_PIN G2 [get_ports {scan[3]}]
 set_property PACKAGE_PIN C2 [get_ports {scan[2]}]
@@ -32,3 +35,10 @@ set_property PACKAGE_PIN B2 [get_ports {seg_code[6]}]
 set_property PACKAGE_PIN D5 [get_ports {seg_code[7]}]
 
 
+
+
+
+set_property PACKAGE_PIN R1 [get_ports {enable[3]}]
+set_property PACKAGE_PIN N4 [get_ports {enable[2]}]
+set_property PACKAGE_PIN R2 [get_ports {enable[0]}]
+set_property PACKAGE_PIN M4 [get_ports {enable[1]}]

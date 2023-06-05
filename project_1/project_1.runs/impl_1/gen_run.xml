@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1685721273">
-  <File Type="OPT-HWDEF" Name="scan_7_seg.hwdef"/>
-  <File Type="ROUTE-BUS-SKEW" Name="scan_7_seg_bus_skew_routed.rpt"/>
-  <File Type="PA-DCP" Name="scan_7_seg.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1685976086">
   <File Type="BITSTR-BMM" Name="scan_7_seg_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="scan_7_seg_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="scan_7_seg_timing_summary_init.rpt"/>
@@ -13,6 +10,7 @@
   <File Type="ROUTE-PWR-SUM" Name="scan_7_seg_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="scan_7_seg_reports.tcl"/>
   <File Type="OPT-DRC" Name="scan_7_seg_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="scan_7_seg.hwdef"/>
   <File Type="PWROPT-DCP" Name="scan_7_seg_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="scan_7_seg_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="scan_7_seg_timing_summary_pwropted.rpt"/>
@@ -50,6 +48,7 @@
   <File Type="ROUTE-TIMING-RPX" Name="scan_7_seg_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="scan_7_seg_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="scan_7_seg_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="scan_7_seg_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="scan_7_seg_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="scan_7_seg_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="scan_7_seg_postroute_physopt.dcp"/>
@@ -78,14 +77,14 @@
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/clk_1khz.v">
+    <File Path="$PSRCDIR/sources_1/new/clk_16hz.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/clk_quarter_hz.v">
+    <File Path="$PSRCDIR/sources_1/new/clk_1khz.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -115,6 +114,30 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/scan_7_seg.v">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clk_4hz.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clk_quarter_hz.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clk_1hz.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
