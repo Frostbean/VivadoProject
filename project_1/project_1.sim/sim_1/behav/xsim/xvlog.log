@@ -1,4 +1,2 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/user/Downloads/VivadoProject/project_1/project_1.srcs/sources_1/new/random_generator.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module random_generator
-ERROR: [VRFC 10-1280] procedural assignment to a non-register enable is not permitted, left-hand side should be reg/integer/time/genvar [C:/Users/user/Downloads/VivadoProject/project_1/project_1.srcs/sources_1/new/random_generator.v:57]
-ERROR: [VRFC 10-2865] module 'random_generator' ignored due to previous errors [C:/Users/user/Downloads/VivadoProject/project_1/project_1.srcs/sources_1/new/random_generator.v:23]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/user/Downloads/VivadoProject-b41ae99e29e7bab9284d276400d32d3d6f0c61fb/VivadoProject-b41ae99e29e7bab9284d276400d32d3d6f0c61fb/project_1/project_1.srcs/sim_1/new/test_bench_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench_1

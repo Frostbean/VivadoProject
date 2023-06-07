@@ -28,7 +28,7 @@ module led_decoder (
     output [7:0] seg_code;
     reg [7:0] seg_code;
 
-    parameter _1 = 8'h06, _3 = 8'h4f, _5 = 8'h6d, _7 = 8'h07, _9 = 8'h6f, __ = 8'h40, _win = 8'hff;
+    parameter _1 = 8'h06, _3 = 8'h4f, _5 = 8'h6d, _7 = 8'h07, _9 = 8'h6f, __ = 8'h40;
 
     always @(posedge clk)
     begin
